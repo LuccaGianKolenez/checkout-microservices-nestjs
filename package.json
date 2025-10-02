@@ -1,0 +1,17 @@
+{
+  "name": "checkout-microservices-nestjs",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "services/*"
+  ],
+  "scripts": {
+    "start": "docker-compose up -d && npm run start:dev --workspace=checkout",
+    "test": "jest --passWithNoTests"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.4"
+  }
+}
